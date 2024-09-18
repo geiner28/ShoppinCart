@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: shopping
+    jackson:
+      default-property-inclusion: non_null
+      property-naming-strategy: SNAKE_CASE
+  datasource:
+    url: jdbc:postgresql://localhost:5432/students_db
+    username: postgres
+    password: admin
+    driver-class-name: org.postgresql.Driver
+  jpa:
+      show-sql: true
+      hibernate:
+        ddl-auto: create
+
