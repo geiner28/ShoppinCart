@@ -1,5 +1,6 @@
 package com.services.ms.shoppingCart.app.infrasture.adapters.input.rest.model.request;
 
+import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 import lombok.*;
@@ -20,8 +21,8 @@ public class UserCreateRequest {
     @NotNull (message ="el campo age no puede ser nulo")
     private int age;
 
-    @NotEmpty (message ="el campo DNI no puede ser vacio o nulo")
-    private  String DNI;
+    @NotBlank (message ="el campo DNI no puede ser vacio o nulo")
+    private  String dni;
 
     @NotEmpty (message ="el campo address no puede ser vacio o nulo")
     private String address;

@@ -12,7 +12,7 @@ public class UserResponse {
     private String name;
     private String surname;
     private int age;
-    private  String DNI;
+    private String dni;
     private String address;
     private String email;
     private String phone;

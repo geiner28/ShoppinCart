@@ -1,4 +1,4 @@
-package com.services.ms.shoppingCart.app.infrasture.adapters;
+package com.services.ms.shoppingCart.app.infrastructure.adapters;
 
 
 import com.services.ms.shoppingCart.app.aplication.ports.input.UserServicePort;
@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/users")
@@ -26,6 +27,13 @@ public class UserRestAdapter {
     public List<UserResponse> finAll(){
         return userRestMapper.toUserResponses(userServicePort.findAllUsers());
     }
+@GetMapping("/test")
+public ResponseEntity<String> test() {
+    return ResponseEntity.ok("Endpoint is working");
+}
+
+
+
 
     @GetMapping("/v1/api/{id}")
     public UserResponse findById(@PathVariable Long id) {
@@ -43,6 +51,8 @@ return  ResponseEntity.status(HttpStatus.CREATED)
 
 }
 
+
+
 @PutMapping("/v1/api/{id}")
 public UserResponse update(@PathVariable Long id,@Valid @RequestBody UserCreateRequest request ) {
         return userRestMapper.toUserResponse(
@@ -52,7 +62,7 @@ public UserResponse update(@PathVariable Long id,@Valid @RequestBody UserCreateR
 
 
 
-@DeleteMapping("v1/api/{id}")
+@DeleteMapping("/v1/api/{id}")
     public void delete(@PathVariable Long id) {
         userServicePort.deleteUser(id);
 }

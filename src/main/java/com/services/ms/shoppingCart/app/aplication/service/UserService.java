@@ -36,7 +36,7 @@ public class UserService implements UserServicePort {
             saveUser.setName(user.getName());
             saveUser.setEmail(user.getEmail());
             saveUser.setAge(user.getAge());
-            saveUser.setDNI(user.getDNI());
+            saveUser.setDni(user.getDni());
             saveUser.setAddress(user.getAddress());
             saveUser.setEmail(user.getEmail());
             saveUser.setPhone(user.getPhone());

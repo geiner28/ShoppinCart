@@ -5,6 +5,8 @@ import com.services.ms.shoppingCart.app.infrasture.adapters.output.persistence.E
 
 import java.util.List;
 
+import org.mapstruct.Mapper;
+@Mapper(componentModel = "spring")
 public interface UserPersistenceMapper {
 
     User toUser(UserEntity entity);
