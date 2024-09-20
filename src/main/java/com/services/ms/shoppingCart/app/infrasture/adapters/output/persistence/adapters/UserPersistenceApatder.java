@@ -1,4 +1,4 @@
-package com.services.ms.shoppingCart.app.infrasture.adapters.output.persistence;
+package com.services.ms.shoppingCart.app.infrasture.adapters.output.persistence.adapters;
 
 import com.services.ms.shoppingCart.app.aplication.ports.output.UserPresistence;
 import com.services.ms.shoppingCart.app.domain.model.User;

@@ -1,4 +1,4 @@
-package com.services.ms.shoppingCart.app.infrasture.adapters.output.persistence.Entity;
+package com.services.ms.shoppingCart.app.infrasture.adapters.output.persistence.Entity.EntityModelDb;
 
 
 import jakarta.persistence.*;

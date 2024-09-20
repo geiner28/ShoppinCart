@@ -1,7 +1,7 @@
 package com.services.ms.shoppingCart.app.infrasture.adapters.output.persistence.Entity.Mapper;
 
 import com.services.ms.shoppingCart.app.domain.model.User;
-import com.services.ms.shoppingCart.app.infrasture.adapters.output.persistence.Entity.UserEntity;
+import com.services.ms.shoppingCart.app.infrasture.adapters.output.persistence.Entity.EntityModelDb.UserEntity;
 
 import java.util.List;
 

@@ -51,6 +51,6 @@ return userPresistence.saveUsers(saveUser);
         if(userPresistence.findUserById(id).isEmpty()){
             throw new RuntimeException("no such user");
         }
-userPresistence.deleteUser(id);
+    userPresistence.deleteUser(id);
     }
 }
