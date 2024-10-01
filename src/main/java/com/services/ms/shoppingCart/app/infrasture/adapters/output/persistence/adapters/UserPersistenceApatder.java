@@ -19,7 +19,7 @@ public class UserPersistenceApatder implements UserPresistence {
     private  final UserPersistenceMapper userPersistenceMapper;
 
     @Override
-    public Optional<User> findUserById(long id) {
+    public Optional<User> findUserById(Long id) {
         return userRepository.findById(id)
                 .map(userPersistenceMapper::toUser);
     }

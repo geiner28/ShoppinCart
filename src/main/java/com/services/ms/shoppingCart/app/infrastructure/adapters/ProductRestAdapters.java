@@ -28,13 +28,31 @@ public class ProductRestAdapters {
         return productRestMapper.toProductResponses(productServicePort.findAllProducts());
     }
 
+
+    @GetMapping("/v1/api/{id}")
+    public ProductResponse findProductById(@PathVariable Long id) {
+        return productRestMapper.toProductResponse(productServicePort.findProductById(id));
+    }
+
     @PostMapping("/v1/api")
     @ResponseStatus (HttpStatus.CREATED)
-    public ResponseEntity<ProductResponse> createProduct(@Valid @RequestBody ProductCreateRequest request) {
+    public ResponseEntity<ProductResponse> save(@Valid @RequestBody ProductCreateRequest request) {
         return ResponseEntity.status(HttpStatus.CREATED)
                 .body(productRestMapper.toProductResponse(
                         productServicePort.saveProduct(productRestMapper.toProduct(request))
                 ));
-
     }
+
+    @PutMapping("/v1/api/{id}")
+    public ProductResponse update (@PathVariable Long id, @Valid @RequestBody ProductCreateRequest request) {
+        return productRestMapper.toProductResponse(
+                productServicePort.updateProduct(id, productRestMapper.toProduct(request))
+        );
+    }
+
+    @DeleteMapping("/v1/api/{id}")
+    public void delete (@PathVariable Long id) {
+        productServicePort.deleteProduct(id);
+    }
+
 }

@@ -8,9 +8,13 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 
-public class ShoppinItem {
-    private long productId;
+public class ShoppingItem {
+
+    private Long id;
+
+    private Product product;
     private String productName;
     private double price;
     private int quantity;
+    private Shopping shopping;
 }

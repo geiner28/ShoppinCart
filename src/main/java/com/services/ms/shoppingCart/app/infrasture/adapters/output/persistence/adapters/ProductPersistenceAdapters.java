@@ -4,7 +4,7 @@ import com.services.ms.shoppingCart.app.aplication.ports.output.ProductPresisten
 import com.services.ms.shoppingCart.app.domain.model.Product;
 import com.services.ms.shoppingCart.app.infrasture.adapters.output.persistence.Entity.Mapper.ProductPersistenceMapper;
 import com.services.ms.shoppingCart.app.infrasture.adapters.output.persistence.Repository.ProductRepository;
-import com.services.ms.shoppingCart.app.infrasture.adapters.output.persistence.Repository.UserRepository;
+
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
@@ -17,7 +17,7 @@ public class ProductPersistenceAdapters implements ProductPresistence {
 
     private  final ProductRepository productRepository;
     private final ProductPersistenceMapper productPersistenceMapper;
-    private final UserRepository userRepository;
+
 
     @Override
     public Optional<Product> findProductById(Long id) {
@@ -41,6 +41,6 @@ public class ProductPersistenceAdapters implements ProductPresistence {
 
     @Override
     public void deleteProduct(Long id) {
-        userRepository.deleteById(id);
+        productRepository.deleteById(id);
     }
 }

@@ -1,18 +1,18 @@
 package com.services.ms.shoppingCart.app.aplication.ports.input;
 
-import com.services.ms.shoppingCart.app.domain.model.ShoppinItem;
+import com.services.ms.shoppingCart.app.domain.model.ShoppingItem;
 
 import java.util.List;
 
 public interface ShoppingItemServicePort {
 
-    ShoppinItem findShoppingItemById(Long     id);
+    ShoppingItem findShoppingItemById(Long productId);
 
-    List <ShoppinItem> findAllShoppingItems();
+    List <ShoppingItem> findAllShoppingItems();
 
-    ShoppinItem saveShoppinItem(ShoppinItem shoppinItem);
+    ShoppingItem saveShoppingItem(ShoppingItem shoppingItem);
 
-    ShoppinItem updateShoppinItem(Long id,ShoppinItem shoppinItem);
+    ShoppingItem updateShoppingItem(Long id, ShoppingItem shoppingItem);
 
     void deleteShoppingItem(Long id);
 

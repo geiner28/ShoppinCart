@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface ShoppingServicePort {
 
-    Shopping findShoppingById(long id);
+    Shopping findShoppingById(Long id);
 
     List<Shopping> finallShopping();
 

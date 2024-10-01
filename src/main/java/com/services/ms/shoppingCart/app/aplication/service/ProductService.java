@@ -44,7 +44,7 @@ public class ProductService implements ProductServicePort {
     }
 
     @Override
-    public void deleteProduct(long id) {
+    public void deleteProduct(Long id) {
         if(productPresistence.findProductById(id).isEmpty()){
             throw new RuntimeException("Product with id " + id + " not found");
         }

@@ -1,31 +1,46 @@
-package com.services.ms.shoppingCart.app.infrasture.adapters.output.persistence.Entity.EntityModelDb;
+    package com.services.ms.shoppingCart.app.infrasture.adapters.output.persistence.Entity.EntityModelDb;
 
 
-import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+    import jakarta.persistence.*;
+    import lombok.AllArgsConstructor;
+    import lombok.Getter;
+    import lombok.NoArgsConstructor;
+    import lombok.Setter;
 
 
-@Getter
-@Setter
-@AllArgsConstructor
-@NoArgsConstructor
-@Entity
-@Table (name = "users")
-public class UserEntity {
+    @Getter
+    @Setter
+    @AllArgsConstructor
+    @NoArgsConstructor
+    @Entity
+    @Table(name = "users")
+    public class UserEntity {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+        @Id
+        @GeneratedValue(strategy = GenerationType.IDENTITY)
+        private Long id;
 
-    private String name;
-    private String surname;
-    private int age;
-    private String dni;
-    private String address;
-    private String email;
-    private String phone;
-    private String password;
-}
+        @Column(nullable = false)
+        private String name;
+
+        @Column(nullable = false)
+        private String surname;
+
+        private int age;
+
+        @Column(nullable = false, unique = true)
+        private String dni;
+
+        private String address;
+
+        @Column(nullable = false, unique = true)
+        private String email;
+
+        private String phone;
+
+        @Column(nullable = false)
+        private String password;
+
+
+    }
+

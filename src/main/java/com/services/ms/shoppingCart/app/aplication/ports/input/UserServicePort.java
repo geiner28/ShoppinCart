@@ -6,14 +6,14 @@ import java.util.List;
 
 public interface UserServicePort {
 
-    User findUserById (long id);
+    User findUserById (Long id);
 
     List<User> findAllUsers ();
 
     User saveUser (User user);
 
-    User updateUser (long id, User user);
+    User updateUser (Long id, User user);
 
-    void deleteUser (long id);
+    void deleteUser (Long id);
 
 }

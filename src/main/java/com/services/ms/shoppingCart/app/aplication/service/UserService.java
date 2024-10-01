@@ -16,7 +16,7 @@ public class UserService implements UserServicePort {
   private final UserPresistence userPresistence;
 
     @Override
-    public User findUserById(long id) {
+    public User findUserById(Long id) {
         return  userPresistence.findUserById(id).orElseThrow(null);
     }
 
@@ -31,7 +31,7 @@ public class UserService implements UserServicePort {
     }
 
     @Override
-    public User updateUser(long id, User user) {
+    public User updateUser(Long id, User user) {
         return userPresistence.findUserById(id).map(saveUser ->{
             saveUser.setName(user.getName());
             saveUser.setEmail(user.getEmail());
@@ -47,7 +47,7 @@ return userPresistence.saveUsers(saveUser);
     }
 
     @Override
-    public void deleteUser(long id) {
+    public void deleteUser(Long id) {
         if(userPresistence.findUserById(id).isEmpty()){
             throw new RuntimeException("no such user");
         }

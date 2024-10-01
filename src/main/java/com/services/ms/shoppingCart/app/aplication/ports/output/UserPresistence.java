@@ -7,7 +7,7 @@ import java.util.Optional;
 
 public interface UserPresistence {
 
-    Optional<User> findUserById(long id);
+    Optional<User> findUserById(Long id);
 
     List<User> findAllUsers();
 

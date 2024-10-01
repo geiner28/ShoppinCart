@@ -15,15 +15,21 @@ import lombok.Setter;
 @Table(name = "products")
 public class ProductEntity {
 
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
 
+    @Column(nullable = false)
+    private String name;
 
-        private String name;
-        private double price;
-        private int stock;
-        private String description;
-        private String imageUrl;
+    @Column(nullable = false)
+    private double price;
+
+    @Column(nullable = false)
+    private int stock;
+
+    private String description;
+
+    private String imageUrl;
 }
+

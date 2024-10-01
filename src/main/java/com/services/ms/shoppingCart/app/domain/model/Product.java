@@ -9,10 +9,12 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Product {
-    private long id;
+    private Long id;
     private String name;
     private double price;
     private int stock;
     private String description;
     private String imageUrl;
+
+    
 }
