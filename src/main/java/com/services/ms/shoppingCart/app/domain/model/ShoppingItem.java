@@ -18,3 +18,5 @@ public class ShoppingItem {
     private int quantity;
     private Shopping shopping;
 }
+
+

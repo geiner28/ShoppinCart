@@ -13,8 +13,10 @@ import lombok.*;
 public class ShoppingItemResponse {
 
 
-    private Product productId;
+    private Product product;
     private String productName;
     private double price;
     private int quantity;
+
+
 }

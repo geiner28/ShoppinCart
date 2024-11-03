@@ -12,6 +12,7 @@ import lombok.*;
 @NoArgsConstructor
 public class ProductCreateRequest {
 
+private Long id ;
     @NotBlank(message = "el campo name no puede ser nulo o vacio")
     private String name;
 
@@ -26,6 +27,7 @@ private double price;
 
     @NotBlank (message ="la imagen no puede estar vacia ")
     private String imageUrl;
+
 
 
 }
